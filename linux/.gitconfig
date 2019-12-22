@@ -1,5 +1,5 @@
 
-# NOTE: Include ../common/.gitconfig
+### Included from https://github.com/rkm/dotfiles/blob/master/linux/.gitconfig ###
 	
 [alias]
   # NOTE: Prunes local tags

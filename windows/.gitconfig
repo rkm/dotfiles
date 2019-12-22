@@ -1,5 +1,5 @@
 
-# Note: Include ../common/.gitconfig
+### Included from https://github.com/rkm/dotfiles/blob/master/windows/.gitconfig ###
 
 [core]
   autocrlf = true

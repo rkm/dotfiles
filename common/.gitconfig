@@ -1,4 +1,6 @@
 
+### Included from https://github.com/rkm/dotfiles/blob/master/common/.gitconfig ###
+
 [user]
   name = Ruairidh MacLeod
   email = 5160559+rkm@users.noreply.github.com
