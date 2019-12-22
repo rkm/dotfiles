@@ -1,6 +1,7 @@
 
-# Note: Include ../common/.gitconfig
+# NOTE: Include ../common/.gitconfig
 	
 [alias]
+  # NOTE: Prunes local tags
   pt = !git tag -l | xargs git tag -d && git fetch -t
 
