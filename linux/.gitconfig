@@ -1,0 +1,6 @@
+
+# Note: Include ../common/.gitconfig
+	
+[alias]
+  pt = !git tag -l | xargs git tag -d && git fetch -t
+

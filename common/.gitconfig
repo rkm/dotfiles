@@ -1,0 +1,18 @@
+
+[user]
+  name = Ruairidh MacLeod
+  email = 5160559+rkm@users.noreply.github.com
+
+[core]
+  filemode = false
+  ignorecase = false
+
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+
+[color]
+  ui = true
+
