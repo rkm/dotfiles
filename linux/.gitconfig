@@ -4,8 +4,7 @@
 [core]
   editor = vim
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	
+
 [alias]
   # NOTE: Prunes local tags
   pt = !git tag -l | xargs git tag -d && git fetch -t
-
