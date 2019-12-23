@@ -1,6 +1,6 @@
 
 ### Included from https://github.com/rkm/dotfiles/blob/master/linux/.inputrc ###
 
-if [ ! -a ~/.inputrc ]; then echo '$include /etc/inputrc' > ~/.inputrc; fi
+$include /etc/inputrc
 
 echo 'set completion-ignore-case On' >> ~/.inputrc
