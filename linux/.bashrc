@@ -17,6 +17,8 @@ export VISUAL=vim
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+PROMPT_COMMAND='if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && which pre-commit >& /dev/null; then pre-commit install; fi; '"$PROMPT_COMMAND"
+
 function timer_start {
   timer=${timer:-$SECONDS}
 }
