@@ -3,4 +3,4 @@
 
 $include /etc/inputrc
 
-echo 'set completion-ignore-case On' >> ~/.inputrc
+set completion-ignore-case On
