@@ -33,4 +33,4 @@ PROMPT_COMMAND=timer_stop
 
 export PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] [$? ${timer_show}s]\n> '
 
-[ -d /usr/local/go ] && export PATH=$PATH:/usr/local/go
+[ -d /usr/local/go ] && export PATH=$PATH:/usr/local/go/bin
