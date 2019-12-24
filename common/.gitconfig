@@ -19,5 +19,9 @@
   # NOTE: Prunes local tags
   pt = !git tag -l | xargs git tag -d && git fetch -t
 
+[push]
+
+  default = simple
+
 [color]
   ui = true
