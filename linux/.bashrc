@@ -32,7 +32,7 @@ function timer_stop {
 trap 'timer_start' DEBUG
 PROMPT_COMMAND=timer_stop
 
-export PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] [$? ${timer_show}s]\n> '
+export PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] [$STY] ${timer_show}s $?\n> '
 
 PROMPT_COMMAND='if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && which pre-commit >& /dev/null; then pre-commit install; fi; '"$PROMPT_COMMAND"
 
