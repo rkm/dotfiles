@@ -9,3 +9,5 @@ alias gdc='git diff --cached'
 alias au='ansible-pull -U https://github.com/rkm/personal-centos7-ansible'
 
 alias ss='sudo systemctl'
+
+[ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure

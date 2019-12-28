@@ -1,0 +1,10 @@
+
+### Included from https://github.com/rkm/dotfiles/blob/master/linux/.bash_aliases_azure ###
+
+alias az-create-centos="az vm create "`
+                       `"--image 'OpenLogic:CentOS:7.7:latest' "`
+                       `"--size Standard_B1s "`
+                       `"--admin-username rkm "`
+                       `"--generate-ssh-keys "`
+                       `"--use-unmanaged-disk "`
+                       `"--storage-sku Standard_LRS"
