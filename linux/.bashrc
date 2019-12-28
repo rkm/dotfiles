@@ -38,5 +38,6 @@ PROMPT_COMMAND='if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-con
 
 [ -d /usr/local/go ] && export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/dev/go
+export PATH=$PATH:$GOPATH/bin
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
