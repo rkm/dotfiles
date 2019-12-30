@@ -3,6 +3,7 @@
 
 alias grep='grep --color=auto --line-buffered'
 alias ls='ls --color=auto'
+alias ll='ls -l'
 
 alias gdc='git diff --cached'
 
