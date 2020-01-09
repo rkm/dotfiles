@@ -7,6 +7,7 @@
   username = rkm
 
 [core]
+  autocrlf = true
   filemode = false
   ignorecase = false
 
