@@ -12,3 +12,8 @@ alias au='ansible-pull -U https://github.com/rkm/personal-centos7-ansible'
 alias ss='sudo systemctl'
 
 [ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure
+
+function pyinit {
+    python3 -m venv venv && \
+    echo -e '"""\n\n"""\n\n\nimport sys\n\n\ndef main() -> int:\n    return 0\n\n\nif __name__ == "__main__":\n    sys.exit(main())' > main.py
+}
