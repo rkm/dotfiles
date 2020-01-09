@@ -13,7 +13,3 @@ repos:
     rev: v1.16.0
     hooks:
       - id: codespell
-  - repo: https://github.com/adrienverge/yamllint
-    rev: v1.19.0
-    hooks:
-      - id: yamllint
