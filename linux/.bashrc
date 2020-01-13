@@ -36,7 +36,6 @@ export PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]
 
 PROMPT_COMMAND='if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && which pre-commit >& /dev/null; then pre-commit install; fi; '"$PROMPT_COMMAND"
 
-[ -d /usr/local/go ] && export PATH=$PATH:/usr/local/go/bin
 export GOPATH=~/dev/go
 export PATH=$PATH:$GOPATH/bin
 
