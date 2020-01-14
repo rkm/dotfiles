@@ -14,6 +14,6 @@ alias ss='sudo systemctl'
 [ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure
 
 function pyinit {
-    python3 -m venv venv && \
+    virtualenv -ppython3.7 venv && \
     echo -e '"""\n\n"""\n\n\nimport sys\n\n\ndef main() -> int:\n    return 0\n\n\nif __name__ == "__main__":\n    sys.exit(main())' > main.py
 }
