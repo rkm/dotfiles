@@ -12,6 +12,9 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
+LS_COLORS=$LS_COLORS:'di=4;37:'
+export LS_COLORS
+
 shopt -s checkwinsize
 shopt -s globstar
 
