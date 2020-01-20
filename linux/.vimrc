@@ -9,7 +9,7 @@ set tabstop=4
 
 " Column rulers
 execute "set colorcolumn=80,88"
-execute "highlight ColorColumn ctermbg=grey"
+execute "highlight ColorColumn ctermbg=darkgrey"
 
 " TODO snippet
 function TODO()
