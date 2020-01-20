@@ -10,3 +10,9 @@ set tabstop=4
 " Column rulers
 execute "set colorcolumn=80,88"
 execute "highlight ColorColumn ctermbg=grey"
+
+" TODO snippet
+function TODO()
+    return "# TODO(rkm " . strftime("%Y-%m-%d") . ")"
+endfunction
+iabbrev <expr> todo# TODO()
