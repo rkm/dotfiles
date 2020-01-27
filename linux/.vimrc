@@ -16,3 +16,6 @@ function TODO()
     return "# TODO(rkm " . strftime("%Y-%m-%d") . ")"
 endfunction
 iabbrev <expr> todo# TODO()
+
+" Misc.
+set autoread
