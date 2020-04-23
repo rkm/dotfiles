@@ -1,7 +1,7 @@
 
 " Included from https://github.com/rkm/dotfiles/blob/master/linux/.vimrc
 
-" XDG_CONFIG_HOME setup
+" XDG_DATA_HOME setup
 set backupdir=$XDG_DATA_HOME/vim/backup
 set directory=$XDG_DATA_HOME/vim/swap
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
