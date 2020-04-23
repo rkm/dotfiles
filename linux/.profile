@@ -20,3 +20,5 @@ export PATH="$PATH:/opt/bin"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GOPATH="$HOME/dev/go"
 export PATH="$PATH:$GOPATH/bin"
+
+[ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
