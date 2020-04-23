@@ -38,8 +38,3 @@ PROMPT_COMMAND=timer_stop
 export PS1='\n\[$(printf "\\u2500%.0s" $(seq $(tput cols)))\]\n\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] [$STY] ${timer_show}s ${RC}\n> '
 
 PROMPT_COMMAND='RC=$?; if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && which pre-commit >& /dev/null; then pre-commit install; fi; '"$PROMPT_COMMAND"
-
-export GOPATH=~/dev/go
-export PATH=$PATH:$GOPATH/bin
-
-export DOTNET_CLI_TELEMETRY_OPTOUT=1
