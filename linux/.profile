@@ -6,8 +6,8 @@
 # TODO: export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
 
 # Default programs
-export EDITOR="nvim"
-export TERMINAL="st"
+export EDITOR="vim"
+export TERMINAL="bash"
 export BROWSER="brave"
 
 export XDG_CONFIG_HOME="$HOME/.config"
