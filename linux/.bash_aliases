@@ -5,7 +5,7 @@ alias grep='grep --color=auto --line-buffered'
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 
-alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
+alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
 
 alias gdc='git diff --cached'
 
