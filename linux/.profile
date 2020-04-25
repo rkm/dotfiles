@@ -14,7 +14,6 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 export LESSHISTFILE="-"
 export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
-export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 
 export PATH="$PATH:/opt/bin"
 export PATH="$PATH:~/.local/bin"
