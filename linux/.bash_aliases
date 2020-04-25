@@ -9,7 +9,8 @@ alias wget=wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"
 
 alias gdc='git diff --cached'
 
-alias au='ansible-pull -U https://github.com/rkm/personal-centos7-ansible'
+alias au7='ansible-pull -U https://github.com/rkm/personal-centos7-ansible'
+alias au8='ansible-pull -U https://github.com/rkm/personal-centos8'
 
 alias ss='sudo systemctl'
 
