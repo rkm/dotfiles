@@ -22,4 +22,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GOPATH="$HOME/dev/go"
 export PATH="$PATH:$GOPATH/bin"
 
+export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+
 [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
