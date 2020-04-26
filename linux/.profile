@@ -21,6 +21,8 @@ export PATH="$PATH:/home/rkm/.local/bin"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GOPATH="$HOME/dev/go"
 export PATH="$PATH:$GOPATH/bin"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
