@@ -16,7 +16,7 @@ export LESSHISTFILE="-"
 export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 
 export PATH="$PATH:/opt/bin"
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:/home/rkm/.local/bin"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export GOPATH="$HOME/dev/go"

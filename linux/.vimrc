@@ -27,3 +27,4 @@ iabbrev <expr> todo# TODO()
 
 " Misc.
 set autoread
+set paste
