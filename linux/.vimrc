@@ -27,4 +27,8 @@ iabbrev <expr> todo# TODO()
 
 " Misc.
 set autoread
-set paste
+set number
+set pastetoggle=<F2>
+
+set wrap
+set linebreak
