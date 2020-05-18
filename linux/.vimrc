@@ -15,6 +15,11 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
+set noautoindent
+
+" Don't auto-insert comments (on paste)
+set formatoptions-=cro
+
 " Column rulers
 execute "set colorcolumn=80,88"
 execute "highlight ColorColumn ctermbg=darkgrey"
