@@ -3,6 +3,9 @@
 
 [core]
   autocrlf = true
+  filemode = false
+  ignorecase = false
+  sshCommand = 'C:\\Windows\\System32\\OpenSSH\\ssh.exe'
 
 [merge]
   tool = sublimerge
