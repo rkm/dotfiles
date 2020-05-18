@@ -1,5 +1,6 @@
 
 # TODO(rkm 2020-01-19) Move this to a Gist or something
+# TODO(rkm 2020-01-19) Check if matches span multiple lines
 
 import argparse
 import os
@@ -18,8 +19,8 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("query")
     parser.add_argument("extension")
-    parser.add_argument("--ignore-case", action="store_true")
-    parser.add_argument("--exact", action="store_true")
+    parser.add_argument("-i", "--ignore-case", action="store_true")
+    parser.add_argument("-e", "--exact", action="store_true")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
     if args.ignore_case and args.exact:
