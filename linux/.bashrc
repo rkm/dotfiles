@@ -21,6 +21,14 @@ shopt -s globstar
 export EDITOR=vim
 export VISUAL=vim
 
+# Simplified settings for teaching
+if [ "$TEACH" != "" ]; then
+    unset PROMPT_COMMAND
+    export PS1='\n$(pwd)\n$ '
+    alias python=python3
+    return 0
+fi
+
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
 function timer_start {
