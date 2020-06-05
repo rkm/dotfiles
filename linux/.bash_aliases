@@ -19,4 +19,6 @@ function au {
 
 alias ss='sudo systemctl'
 
+alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
+
 [ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure

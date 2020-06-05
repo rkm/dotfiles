@@ -27,5 +27,6 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"; export PATH="/home/rkm/.local/share/cargo/bin:$PATH"
 export STACK_ROOT="$XDG_DATA_HOME/stack"
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
 [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
