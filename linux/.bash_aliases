@@ -20,5 +20,6 @@ function au {
 alias ss='sudo systemctl'
 
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
+alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
 
 [ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure
