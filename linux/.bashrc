@@ -17,6 +17,7 @@ export LS_COLORS
 
 shopt -s checkwinsize
 shopt -s globstar
+set -o vi
 
 export EDITOR=vim
 export VISUAL=vim
