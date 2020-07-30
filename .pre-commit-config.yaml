@@ -29,6 +29,7 @@ repos:
       rev: v1.17.1
       hooks:
           - id: codespell
+            args: [--ignore-words, misc/codespell-ignores]
     - repo: https://github.com/prettier/prettier
       rev: "2.0.5"
       hooks:

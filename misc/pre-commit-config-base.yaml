@@ -38,15 +38,17 @@ repos:
       rev: v1.17.1
       hooks:
           - id: codespell
-            args: [--ignore-words=.codespell-ignores]
+            args: [--ignore-words, misc/codespell-ignores]
     - repo: https://github.com/prettier/prettier
       rev: "2.0.5"
       hooks:
           - id: prettier
+            args: [--config, misc/prettierrc.json]
     - repo: https://github.com/adrienverge/yamllint
       rev: v1.24.2
       hooks:
           - id: yamllint
+            args: [-c, misc/yamllint.yaml]
       # Python
     - repo: https://github.com/asottile/setup-cfg-fmt
       rev: v1.11.0
@@ -86,6 +88,7 @@ repos:
       rev: v0.782
       hooks:
           - id: mypy
+            args: [--config-file, misc/mypy.ini]
     - repo: https://github.com/psf/black
       rev: "19.10b0"
       hooks:
