@@ -43,6 +43,10 @@ repos:
       rev: "2.0.5"
       hooks:
           - id: prettier
+    - repo: https://github.com/adrienverge/yamllint
+      rev: v1.24.2
+      hooks:
+          - id: yamllint
       # Python
     - repo: https://github.com/asottile/setup-cfg-fmt
       rev: v1.11.0
@@ -94,7 +98,7 @@ repos:
             additional_dependencies: [flake8-bugbear, flake8-assert-msg]
       # Ansible
     - repo: https://github.com/ansible/ansible-lint.git
-      rev: v4.1.0
+      rev: v4.3.0a4
       hooks:
           - id: ansible-lint
             files: \.(yaml|yml)$
