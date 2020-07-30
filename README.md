@@ -1,7 +1,6 @@
 # Dotfiles
 
-## TODO
+## List of OSS PRs
 
-- Create master .pre-commit-config.yml file for
-  - General
-  - python(to be merged with the general one)
+-   https://github.com/pypa/bandersnatch/pull/592
+-   https://github.com/pypa/bandersnatch/pull/593
