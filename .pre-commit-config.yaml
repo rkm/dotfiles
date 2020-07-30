@@ -37,3 +37,4 @@ repos:
       rev: v1.24.2
       hooks:
           - id: yamllint
+            args: [-cmisc/yamllint.yaml]
