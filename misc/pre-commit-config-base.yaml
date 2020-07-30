@@ -76,10 +76,6 @@ repos:
       hooks:
           - id: pyupgrade
             args: [--py36-plus]
-    - repo: https://github.com/asottile/dead
-      rev: v1.3.0
-      hooks:
-          - id: dead
     - repo: https://github.com/asottile/yesqa
       rev: v1.2.1
       hooks:
