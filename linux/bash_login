@@ -1,0 +1,14 @@
+#!/usr/bin/bash
+
+. ~/.profile
+
+file="/home/rkm/.au.last.tmp"
+if : \
+    || [ ! -f "$file" ] \
+    || [ "$file" -ot ~/.au.cron.log ] \
+    || [ "$file" -ot ~/.au.log ] \
+    ; then
+    echo Running au script
+    nohup au &> /dev/null &
+    touch $file
+fi
