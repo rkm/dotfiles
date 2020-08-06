@@ -9,14 +9,6 @@ alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
 
 alias gdc='git diff --cached'
 
-function au {
-    if [ $(grep -q 'release 7' /etc/redhat-release) ]; then
-        ansible-pull -U https://github.com/rkm/personal-centos7-     ansible "$@" | tee ~/.au.log;
-    else
-        ansible-pull -U https://github.com/rkm/personal-centos8 "$@" | tee ~/.au.log;
-    fi
-}
-
 alias ss='sudo systemctl'
 
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
