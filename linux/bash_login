@@ -9,6 +9,6 @@ if : \
     || [ "$file" -ot ~/.au.log ] \
     ; then
     echo Running au script
-    nohup au &> /dev/null &
     touch $file
+    nohup au &> /dev/null &
 fi
