@@ -6,6 +6,7 @@ file="/home/rkm/.au.last.tmp"
 if : \
     || [ ! -f "$file" ] \
     || [ "$file" -ot ~/.au.cron.log ] \
+    && ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } \
     ; then
     echo Running au script
     touch $file
