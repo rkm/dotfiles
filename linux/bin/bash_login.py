@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-
 import os
+import subprocess
 from pathlib import Path
 
 _LAST_RUN_PATH = Path("/home/rkm/.au.last.tmp")
@@ -18,10 +18,13 @@ def main() -> int:
     ):
         print("last run file is newer - not running")
         return 0
-    breakpoint()
-    print("RUNNING")
+    print("Running au")
     _LAST_RUN_PATH.touch(exist_ok=True)
+    subprocess.Popen(
+        ("nohup", "au"), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+    )
     return 0
+
 
 if __name__ == "__main__":
     exit(main())
