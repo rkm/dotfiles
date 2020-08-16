@@ -1,17 +1,18 @@
-
 # TODO(rkm 2020-01-19) Move this to a Gist or something
 # TODO(rkm 2020-01-19) Check if matches span multiple lines
-
 import argparse
 import os
 import re
 import sys
 from pathlib import Path
+from typing import Any
+from typing import Dict
+from typing import List
 
 
 _IGNORES = [
     ".git",
-    "venv"
+    "venv",
 ]
 
 
@@ -33,7 +34,7 @@ def main() -> int:
     ext = args.extension.lower()
     if not ext.startswith("."):
         ext = "." + ext
-    matches = {}
+    matches: Dict[Path, List[Any]] = {}
     dirs_walked = 0
     files_opened = 0
     for root, dirs, files in os.walk(".", topdown=True, followlinks=True):
@@ -53,10 +54,10 @@ def main() -> int:
             for idx, line in enumerate(text):
                 if re.search(query, line):
                     matches[path].append([idx, line])
-    for file, match_lines in matches.items():
+    for path, match_lines in matches.items():
         if not match_lines:
             continue
-        print(file)
+        print(path)
         for m in match_lines:
             print(f"{m[0]}:\t{m[1].strip()}")
     print(f"\nDirs walked {dirs_walked}, Files opened {files_opened}")
