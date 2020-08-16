@@ -1,14 +1,4 @@
 #!/usr/bin/bash
 
 . ~/.profile
-
-file="/home/rkm/.au.last.tmp"
-if : \
-    || [ ! -f "$file" ] \
-    || [ "$file" -ot ~/.au.boot.log ] \
-    && ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } \
-    ; then
-    echo Running au script
-    touch $file
-    nohup au &> /dev/null &
-fi
+~/.local/bin/bash_login.py
