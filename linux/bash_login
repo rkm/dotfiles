@@ -10,5 +10,5 @@ if : \
     ; then
     echo Running au script
     touch $file
-    nohup au --tags boot &> /dev/null &
+    nohup au &> /dev/null &
 fi
