@@ -95,3 +95,4 @@ repos:
       hooks:
           - id: flake8
             additional_dependencies: [flake8-bugbear, flake8-assert-msg]
+            args: [--config, .meta/flake8.conf]
