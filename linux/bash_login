@@ -6,8 +6,8 @@
 if { set -C; 2>/dev/null >~/.au.lock; }; then
     trap "rm -f ~/.au.lock" EXIT
 else
-    echo "Lock file exists - exiting"
-    exit
+    echo "Lock file exists - not running"
+    return
 fi
 
 file="/home/rkm/.au.last.tmp"
