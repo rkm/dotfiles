@@ -2,6 +2,14 @@
 
 . ~/.profile
 
+# https://www.putorius.net/lock-files-bash-scripts.html
+if { set -C; 2>/dev/null >~/.au.lock; }; then
+    trap "rm -f ~/.au.lock" EXIT
+else
+    echo "Lock file exists - exiting"
+    exit
+fi
+
 file="/home/rkm/.au.last.tmp"
 if : \
     || [ ! -f "$file" ] \
