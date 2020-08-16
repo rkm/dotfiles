@@ -5,7 +5,7 @@
 file="/home/rkm/.au.last.tmp"
 if : \
     || [ ! -f "$file" ] \
-    || [ "$file" -ot ~/.au.cron.log ] \
+    || [ "$file" -ot ~/.au.boot.log ] \
     && ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } \
     ; then
     echo Running au script
