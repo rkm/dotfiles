@@ -13,5 +13,5 @@ fi
 if [ $(grep -q 'release 7' /etc/redhat-release) ]; then
     ansible-pull -U https://github.com/rkm/personal-centos7-ansible "$@" | tee ~/.au.log;
 else
-    ansible-pull -U https://github.com/rkm/personal-centos8 "$@" | tee ~/.au.log;
+    ansible-pull -U https://github.com/rkm/personal-centos8 --tags user "$@" | tee ~/.au.log;
 fi
