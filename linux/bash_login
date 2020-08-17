@@ -1,4 +1,4 @@
 #!/usr/bin/bash
 
 . ~/.profile
-~/.local/bin/bash_login.py
+~/.local/bin/bash_login
