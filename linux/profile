@@ -30,5 +30,6 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup";
 export PATH="/home/rkm/.local/share/cargo/bin:$PATH"
 export STACK_ROOT="$XDG_DATA_HOME/stack"
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
+mvn_dir="$HOME/opt/maven/bin"; [ -d $mvn_dir ] && export PATH="$PATH:$mvn_dir"
 
 [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"
