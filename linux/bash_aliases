@@ -12,7 +12,13 @@ alias gdc='git diff --cached'
 alias ss='sudo systemctl'
 
 alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
-alias mvn="mvn -gs $XDG_CONFIG_HOME/maven/settings.xml"
+
+if [ -d ~/opt/maven ]; then
+    function mvn () {
+        ~/opt/maven/bin/mvn -gs $XDG_CONFIG_HOME/maven/settings.xml "$@"
+    }
+    export -f mvn
+fi
 
 alias docker='/usr/bin/podman'
 
