@@ -12,7 +12,7 @@ repos:
           # General
           - id: check-added-large-files
           - id: check-case-conflict
-          - id: check-executables-have-shebangs
+          # - id: check-executables-have-shebangs
           - id: check-json
           - id: check-merge-conflict
           # - id: check-toml
@@ -43,7 +43,7 @@ repos:
           - id: codespell
             args: [--ignore-words, .meta/codespell-ignores]
     - repo: https://github.com/prettier/prettier
-      rev: "2.0.5"
+      rev: "2.1.0"
       hooks:
           - id: prettier
             args: [--config, .meta/prettierrc.json]
