@@ -20,6 +20,4 @@ if [ -d ~/opt/maven ]; then
     export -f mvn
 fi
 
-alias docker='/usr/bin/podman'
-
 [ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure
