@@ -4,7 +4,7 @@
 
 # Default settings
 
-export BROWSER="brave"
+export BROWSER="lynx"
 export EDITOR="vim"
 export TERMINAL="bash"
 
@@ -37,6 +37,10 @@ mvn_dir="$HOME/opt/maven/bin"; [ -d $mvn_dir ] && export PATH="$PATH:$mvn_dir"
 
 ## JavaScript
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+
+## Lynx
+export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
+export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 
 ## Python
 pythonrc="$XDG_CONFIG_HOME"/python_startup.py
