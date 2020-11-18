@@ -6,6 +6,7 @@ alias ll='ls -l'
 alias cols='watch tput cols'
 
 alias path='echo -e ${PATH//:/\\n}'
+alias utop='top -u $USER'
 
 alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
 
