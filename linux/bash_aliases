@@ -26,5 +26,3 @@ if [ -d ~/opt/maven ]; then
     }
     export -f mvn
 fi
-
-[ -f ~/.bash_aliases_azure ] && . ~/.bash_aliases_azure
