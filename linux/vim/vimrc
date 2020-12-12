@@ -34,9 +34,11 @@ function TODO()
 endfunction
 iabbrev <expr> todo# TODO()
 
+" turn hybrid line numbers on
+set number relativenumber
+
 " Misc.
 set autoread
-set number
 set pastetoggle=<F2>
 
 set wrap
