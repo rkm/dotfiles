@@ -4,7 +4,7 @@ alias grep='grep --color=auto --line-buffered'
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias cols='watch tput cols'
-
+alias watch='watch -c'
 alias path='echo -e ${PATH//:/\\n}'
 alias utop='top -u $USER'
 
