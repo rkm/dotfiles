@@ -1,0 +1,38 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "copyOnSelect": false,
+  "copyFormatting": false,
+  "multiLinePasteWarning": false,
+  "profiles": {
+    "defaults": {
+      "colorScheme": "One Half Dark"
+    },
+    "list": []
+  },
+  "schemes": [],
+  "keybindings": [
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": "newTab",
+      "keys": "ctrl+t"
+    },
+    // not tmux-friendly
+    // {
+    //   "command": "closeTab",
+    //   "keys": [
+    //     "ctrl+w"
+    //   ]
+    // },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+d"
+    }
+  ]
+}
