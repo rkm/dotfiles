@@ -45,6 +45,8 @@ repos:
           [
             --ignore-words,
             .meta/codespell-ignores,
+            --exclude-file,
+            .meta/codespell-excludes,
             --ignore-regex,
             '\Whttps?://\S*',
           ]
