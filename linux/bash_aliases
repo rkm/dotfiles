@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 ### Included from https://github.com/rkm/dotfiles/blob/master/linux/.bash_aliases ###
 
 alias grep='grep --color=auto --line-buffered'
@@ -8,13 +10,13 @@ alias watch='watch -c'
 alias path='echo -e ${PATH//:/\\n}'
 alias utop='top -u $USER'
 
-alias wget="wget --hsts-file=$XDG_CACHE_HOME/wget-hsts"
+alias wget='wget --hsts-file=$XDG_CACHE_HOME/wget-hsts'
 
 alias gdc='git diff --cached'
 
 alias ss='sudo systemctl'
 
-alias weechat="weechat -d $XDG_CONFIG_HOME/weechat"
+alias weechat='weechat -d $XDG_CONFIG_HOME/weechat'
 
 alias tf=terraform
 
@@ -22,7 +24,7 @@ alias clean_ssh="SSH_AUTH_SOCK= TERM=xterm ssh"
 
 if [ -d ~/opt/maven ]; then
     function mvn () {
-        ~/opt/maven/bin/mvn -gs $XDG_CONFIG_HOME/maven/settings.xml "$@"
+        ~/opt/maven/bin/mvn -gs "$XDG_CONFIG_HOME"/maven/settings.xml "$@"
     }
     export -f mvn
 fi

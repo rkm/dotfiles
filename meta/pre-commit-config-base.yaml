@@ -58,6 +58,11 @@ repos:
     hooks:
       - id: yamllint
         args: [-c, .meta/yamllint.yaml]
+  # Shell
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: ""
+    hooks:
+      - id: shellcheck
     # Python
   - repo: https://github.com/asottile/setup-cfg-fmt
     rev: ""
