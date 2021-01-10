@@ -25,14 +25,14 @@ repos:
         args: [--autofix, --indent=4]
       - id: sort-simple-yaml
       - id: trailing-whitespace
-        # Python
+      # Python
       - id: check-ast
       - id: check-builtin-literals
       - id: check-docstring-first
       - id: debug-statements
       - id: name-tests-test
       - id: requirements-txt-fixer
-    # General
+  # General
   - repo: meta
     hooks:
       - id: check-hooks-apply
@@ -65,7 +65,7 @@ repos:
     rev: ""
     hooks:
       - id: shellcheck
-    # Python
+  # Python
   - repo: https://github.com/asottile/setup-cfg-fmt
     rev: ""
     hooks:
@@ -112,7 +112,7 @@ repos:
       - id: flake8
         additional_dependencies: [flake8-bugbear, flake8-assert-msg]
         args: [--config, .meta/flake8.conf]
-    # Ansible
+  # Ansible
   - repo: https://github.com/ansible/ansible-lint.git
     rev: ""
     hooks:
