@@ -43,3 +43,8 @@ set pastetoggle=<F2>
 
 set wrap
 set linebreak
+
+" Emoji shortcuts
+ab :plus: ➕
+ab :check: ✅
+ab :cross: ❌
