@@ -96,6 +96,7 @@ repos:
     rev: v1.2.2
     hooks:
       - id: yesqa
+        additional_dependencies: [pep8-naming]
   - repo: https://github.com/pre-commit/mirrors-mypy
     rev: v0.812
     hooks:
@@ -110,5 +111,6 @@ repos:
     rev: 3.9.0
     hooks:
       - id: flake8
-        additional_dependencies: [flake8-bugbear, flake8-assert-msg]
+        additional_dependencies:
+          [flake8-assert-msg, flake8-bugbear, pep8-naming]
         args: [--config, .meta/flake8.conf]
