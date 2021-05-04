@@ -117,4 +117,6 @@ repos:
     rev: ""
     hooks:
       - id: ansible-lint
-        files: \.(yaml|yml)$
+        args: [-c, .meta/ansible-lint.yml]
+        additional_dependencies:
+          - .[community]
