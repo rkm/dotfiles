@@ -9,6 +9,7 @@ alias cols='watch tput cols'
 alias watch='watch -c'
 alias path='echo -e ${PATH//:/\\n}'
 alias utop='top -u $USER'
+alias clock='watch -n0.1 '\''figlet -ctkf big "$(date +%H:%M:%S)"'\'''
 
 alias wget='wget --hsts-file=$XDG_CACHE_HOME/wget-hsts'
 
