@@ -37,6 +37,9 @@ iabbrev <expr> todo# TODO()
 " turn hybrid line numbers on
 set number relativenumber
 
+" Remap Ctrl-W to Ctrl-E
+nnoremap <C-e> <C-w>
+
 " Misc.
 set autoread
 set pastetoggle=<F2>
