@@ -28,11 +28,17 @@ execute "highlight ColorColumn ctermbg=darkgrey"
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-" TODO snippet
+" todo snippet
 function TODO()
     return "# TODO(rkm " . strftime("%Y-%m-%d") . ")"
 endfunction
 iabbrev <expr> todo# TODO()
+
+" dt snippet
+function TODAY()
+    return strftime("%Y-%m-%d")
+endfunction
+iabbrev <expr> dt# TODAY()
 
 " turn hybrid line numbers on
 set number relativenumber
