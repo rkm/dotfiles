@@ -26,7 +26,7 @@ export VISUAL=vim
 # Simplified settings for teaching
 if [ "$TEACH" != "" ]; then
     unset PROMPT_COMMAND
-    export PS1='\n$(pwd)\n$ '
+    export PS1="[\u@\h \W]\\$ "
     alias python=python3
     return 0
 fi
