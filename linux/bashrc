@@ -31,21 +31,40 @@ if [ "$TEACH" != "" ]; then
     return 0
 fi
 
-# shellcheck source=linux/bash_aliases
-[ -f ~/.bash_aliases ] && . "$HOME/.bash_aliases"
-
 function timer_start {
   timer=${timer:-$SECONDS}
 }
+trap 'timer_start' DEBUG
 
 function timer_stop {
   timer_show=$(( SECONDS - timer ))
   unset timer
 }
 
-trap 'timer_start' DEBUG
-PROMPT_COMMAND=timer_stop
+export PS1='\n\[$(printf "\\u2500%.0s" $(seq $(tput cols)))\]\n\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] `date +%H:%M:%S%Z` ${timer_show}s ${RC} ${VENV_PROMPT}\n> '
+function prompt_command {
 
-export PS1='\n\[$(printf "\\u2500%.0s" $(seq $(tput cols)))\]\n\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] `date +%H:%M:%S%Z` ${timer_show}s ${RC}\n> '
+    RC="$?"
 
-PROMPT_COMMAND='RC=$?; if [ -d .git -a ! -x .git/hooks/pre-commit -a -e .pre-commit-config.yaml ] && which pre-commit >& /dev/null; then pre-commit install; fi; '"$PROMPT_COMMAND"
+    if \
+        [ -d .git ] &&
+        [ ! -x .git/hooks/pre-commit ] &&
+        [ -e .pre-commit-config.yaml ] &&
+        which pre-commit >& /dev/null
+    then
+        pre-commit install
+    fi
+
+    VENV_PROMPT=
+    if [ -n "$VIRTUAL_ENV" ]
+    then
+        VENV_PROMPT="(${VIRTUAL_ENV})"
+    fi
+    export VENV_PROMPT
+
+    timer_stop
+}
+export PROMPT_COMMAND=prompt_command
+
+# shellcheck source=linux/bash_aliases
+[ -f ~/.bash_aliases ] && . "$HOME/.bash_aliases"
