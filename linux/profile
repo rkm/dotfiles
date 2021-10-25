@@ -75,6 +75,10 @@ export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 ## Weechat
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
+## Virtualenv
+# NOTE(rkm 2021-10-25) Build our own prompt
+export VIRTUALENV_PROMPT=' '
+export VIRTUALENV_ACTIVATORS=bash
 
 # Finally, source bashrc
 # shellcheck source=linux/bashrc
