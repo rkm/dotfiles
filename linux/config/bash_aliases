@@ -5,6 +5,7 @@
 alias grep='grep --color=auto --line-buffered'
 alias ls='ls -lap --color=auto'
 alias ll='ls'
+alias diff='diff -u'
 alias cols='watch tput cols'
 alias watch='watch -c'
 alias path='echo -e ${PATH//:/\\n}'

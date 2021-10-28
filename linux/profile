@@ -81,5 +81,5 @@ export VIRTUALENV_PROMPT=' '
 export VIRTUALENV_ACTIVATORS=bash
 
 # Finally, source bashrc
-# shellcheck source=linux/bashrc
+# shellcheck source=linux/config/bashrc
 [ -f "$HOME/.bashrc" ] && . "$HOME/.bashrc"

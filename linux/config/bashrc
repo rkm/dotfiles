@@ -66,5 +66,5 @@ function prompt_command {
 }
 export PROMPT_COMMAND=prompt_command
 
-# shellcheck source=linux/bash_aliases
+# shellcheck source=linux/config/bash_aliases
 [ -f ~/.bash_aliases ] && . "$HOME/.bash_aliases"
