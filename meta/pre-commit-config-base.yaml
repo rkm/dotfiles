@@ -35,13 +35,10 @@ repos:
     hooks:
       - id: check-hooks-apply
       - id: check-useless-excludes
-  - repo: local
+  - repo: https://github.com/rkm/pre-commit-nocommit
+    rev: ""
     hooks:
       - id: nocommit
-        name: disallow nocommit
-        entry: (?i)nocommit
-        language: pygrep
-        types: [text]
         exclude: .pre-commit-config.yaml
   - repo: https://github.com/codespell-project/codespell
     rev: ""
