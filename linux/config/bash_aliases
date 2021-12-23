@@ -26,7 +26,10 @@ alias clean_ssh="SSH_AUTH_SOCK= TERM=xterm ssh"
 
 if [ -d ~/opt/maven ]; then
     function mvn () {
-        ~/opt/maven/bin/mvn -ntp -gs "$XDG_CONFIG_HOME"/maven/settings.xml "$@"
+        ~/opt/maven/bin/mvn \
+            --no-transfer-progress \
+            --settings "$XDG_CONFIG_HOME"/maven/settings.xml \
+            "$@"
     }
     export -f mvn
 fi
