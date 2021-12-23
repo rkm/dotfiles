@@ -3,7 +3,7 @@
 ### Included from https://github.com/rkm/dotfiles/blob/master/linux/.bash_aliases ###
 
 alias grep='grep --color=auto --line-buffered'
-alias ls='ls -lap --color=auto'
+alias ls='ls -lap --color=auto --group-directories-first'
 alias ll='ls'
 alias diff='diff -u'
 alias cols='watch tput cols'
