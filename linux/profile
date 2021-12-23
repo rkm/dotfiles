@@ -37,12 +37,20 @@ if [ -x "$(command -v dotnet)" ]; then
     export PATH="$HOME/.dotnet:$PATH"
 fi
 
+# GitHub PAT
+PAT_FILE="$XDG_CONFIG_HOME/GITHUB_PAT"
+if [ -f "$PAT_FILE" ]; then
+    GITHUB_TOKEN="$(cat "$PAT_FILE")"
+    export GITHUB_TOKEN
+fi
+
 ## Go
 export GOPATH="$HOME/dev/go"
 export PATH="$GOPATH/bin:$PATH"
 
 ## Java
-mvn_dir="$HOME/opt/maven/bin"; [ -d "$mvn_dir" ] && export PATH="$PATH:$mvn_dir"
+mvn_dir="$HOME/opt/maven/bin"
+[ -d "$mvn_dir" ] && export PATH="$PATH:$mvn_dir"
 java_home=$(readlink -m "$(readlink -f /usr/bin/java)/../../..")
 [ -f /usr/bin/java ] && export JAVA_HOME=$java_home
 
