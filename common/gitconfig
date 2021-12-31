@@ -1,5 +1,4 @@
-
-### Included from https://github.com/rkm/dotfiles/blob/master/common/.gitconfig ###
+### Included from https://github.com/rkm/dotfiles/blob/master/common/gitconfig ###
 
 [user]
   name = Ruairidh MacLeod
