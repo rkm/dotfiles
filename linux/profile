@@ -74,7 +74,8 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 ## Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-export PATH="/home/rkm/.local/share/cargo/bin:$PATH"
+cargo_bin="$XDG_DATA_HOME/cargo/bin"
+[ -f "$cargo_bin" ] && export PATH="$cargo_bin:$PATH"
 
 ## SQLite
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
