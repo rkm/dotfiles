@@ -46,7 +46,8 @@ fi
 
 ## Go
 export GOPATH="$HOME/dev/go"
-export PATH="$GOPATH/bin:$PATH"
+go_bin="$GOPATH/bin"
+[ -f "$go_bin" ] && export PATH="$go_bin:$PATH"
 
 ## Java
 mvn_dir="$HOME/opt/maven/bin"
