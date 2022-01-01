@@ -2,6 +2,11 @@
 
 ### Included from https://github.com/rkm/dotfiles/blob/master/linux/.profile ###
 
+if [ ! -z "$RKM_PROFILE" ]; then
+    echo "RKM_PROFILE defined; exiting"
+    exit
+fi
+
 # Default settings
 
 export BROWSER="lynx"
@@ -87,6 +92,9 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 # NOTE(rkm 2021-10-25) Build our own prompt
 export VIRTUALENV_PROMPT=' '
 export VIRTUALENV_ACTIVATORS=bash
+
+# Export marker variable
+export RKM_PROFILE=1
 
 # Finally, source bashrc
 # shellcheck source=linux/config/bashrc
