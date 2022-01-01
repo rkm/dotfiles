@@ -20,6 +20,8 @@ mkdir -p "$XDG_DATA_HOME"
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 export LESSHISTFILE="-"
 
+home_bin="$HOME/bin"
+[ -f "$home_bin" ] && export PATH="$home_bin:$PATH"
 [ -f /opt/bin ] && export PATH="/opt/bin:$PATH"
 [ -f /home/rkm/.local/bin ] && export PATH="/home/rkm/.local/bin:$PATH"
 
