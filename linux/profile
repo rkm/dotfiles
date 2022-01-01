@@ -3,8 +3,9 @@
 ### Included from https://github.com/rkm/dotfiles/blob/master/linux/.profile ###
 
 if [ ! -z "$RKM_PROFILE" ]; then
-    echo "RKM_PROFILE defined; exiting"
-    exit
+    echo "RKM_PROFILE defined; sourcing bashrc and returning"
+    [ -f "$XDG_CONFIG_HOME/bashrc" ] && . "$XDG_CONFIG_HOME/bashrc"
+    return
 fi
 
 # Default settings
