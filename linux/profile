@@ -64,10 +64,6 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
 export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 
-## Pip
-local_venv="$HOME/.local/lib/venv/bin"
-[ -d "$local_venv" ] && export PATH="$local_venv:$PATH"
-
 ## Python
 pythonrc="$XDG_CONFIG_HOME"/python_startup.py
 [ -f "$pythonrc" ] && export PYTHONSTARTUP=$pythonrc
