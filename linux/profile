@@ -20,10 +20,8 @@ mkdir -p "$XDG_DATA_HOME"
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
 export LESSHISTFILE="-"
 
-home_bin="$HOME/bin"
-[ -d "$home_bin" ] && export PATH="$home_bin:$PATH"
-[ -d /opt/bin ] && export PATH="/opt/bin:$PATH"
-[ -d /home/rkm/.local/bin ] && export PATH="/home/rkm/.local/bin:$PATH"
+home_bin="$HOME/bin"; [ -d "$home_bin" ] && export PATH="$home_bin:$PATH"
+opt_bin="/opt/bin";   [ -d "$opt_bin" ] && export PATH="$opt_bin:$PATH"
 
 # Program-specific settings
 
@@ -47,15 +45,13 @@ if [ -f "$PAT_FILE" ]; then
 fi
 
 ## Go
-export GOPATH="$HOME/dev/go"
-go_bin="$GOPATH/bin"
-[ -d "$go_bin" ] && export PATH="$go_bin:$PATH"
+export GOPATH="$HOME/src/go"
+go_bin="$GOPATH/bin"; [ -d "$go_bin" ] && export PATH="$go_bin:$PATH"
 
 ## Java
-mvn_dir="$HOME/opt/maven/bin"
-[ -d "$mvn_dir" ] && export PATH="$PATH:$mvn_dir"
+mvn_dir="$HOME/opt/maven/bin"; [ -d "$mvn_dir" ] && export PATH="$PATH:$mvn_dir"
 java_home=$(readlink -m "$(readlink -f /usr/bin/java)/../../..")
-[ -d /usr/bin/java ] && export JAVA_HOME=$java_home
+[ -d "$java_home" ] && export JAVA_HOME="$java_home"
 
 ## JavaScript
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -65,16 +61,14 @@ export LYNX_CFG="$HOME/.config/lynx/lynx.cfg"
 export LYNX_LSS="$HOME/.config/lynx/lynx.lss"
 
 ## Python
-pythonrc="$XDG_CONFIG_HOME"/python_startup.py
-[ -f "$pythonrc" ] && export PYTHONSTARTUP=$pythonrc
+pythonrc="$XDG_CONFIG_HOME"/python_startup.py; [ -f "$pythonrc" ] && export PYTHONSTARTUP="$pythonrc"
 export IPYTHONDIR="$XDG_CONFIG_HOME/jupyter"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 
 ## Rust
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-cargo_bin="$XDG_DATA_HOME/cargo/bin"
-[ -d "$cargo_bin" ] && export PATH="$cargo_bin:$PATH"
+cargo_bin="$XDG_DATA_HOME/cargo/bin"; [ -d "$cargo_bin" ] && export PATH="$cargo_bin:$PATH"
 
 ## SQLite
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
