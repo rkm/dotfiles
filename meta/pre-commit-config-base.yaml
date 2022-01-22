@@ -3,7 +3,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 
 default_language_version:
-  python: python3.8
+  python: python3.9
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -84,7 +84,7 @@ repos:
     rev: ""
     hooks:
       - id: reorder-python-imports
-        args: [--py36-plus]
+        args: [--py39-plus]
   - repo: https://github.com/asottile/add-trailing-comma
     rev: ""
     hooks:
@@ -94,7 +94,7 @@ repos:
     rev: ""
     hooks:
       - id: pyupgrade
-        args: [--py36-plus]
+        args: [--py39-plus]
   - repo: https://github.com/asottile/yesqa
     rev: ""
     hooks:
@@ -109,7 +109,7 @@ repos:
     rev: ""
     hooks:
       - id: black
-        language_version: python38
+        language_version: python39
   - repo: https://gitlab.com/pycqa/flake8
     rev: ""
     hooks:
