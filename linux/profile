@@ -92,7 +92,7 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
 ## Virtualenv
 # NOTE(rkm 2021-10-25) Build our own prompt
-export VIRTUALENV_PROMPT=' '
+export VIRTUAL_ENV_DISABLE_PROMPT=true
 export VIRTUALENV_ACTIVATORS=bash
 
 # Export marker variable
