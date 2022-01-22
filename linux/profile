@@ -2,14 +2,9 @@
 
 ### Included from https://github.com/rkm/dotfiles/blob/master/linux/.profile ###
 
-if [ -n "$RKM_PROFILE" ]; then
-    echo "RKM_PROFILE defined; sourcing bashrc and returning"
-    # shellcheck source=linux/config/bashrc
-    [ -f "$XDG_CONFIG_HOME/bashrc" ] && . "$XDG_CONFIG_HOME/bashrc"
-    return
-fi
-
 # Default settings
+
+export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin"
 
 export BROWSER="lynx"
 export EDITOR="vim"
@@ -94,9 +89,6 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 # NOTE(rkm 2021-10-25) Build our own prompt
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 export VIRTUALENV_ACTIVATORS=bash
-
-# Export marker variable
-export RKM_PROFILE=1
 
 # Finally, source bashrc
 # shellcheck source=linux/config/bashrc
