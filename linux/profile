@@ -51,7 +51,6 @@ export GOPATH="$HOME/src/go"
 go_bin="$GOPATH/bin"; [ -d "$go_bin" ] && export PATH="$go_bin:$PATH"
 
 ## Java
-mvn_dir="$HOME/opt/maven/bin"; [ -d "$mvn_dir" ] && export PATH="$PATH:$mvn_dir"
 java_home=$(readlink -m "$(readlink -f /usr/bin/java)/../../..")
 [ -d "$java_home" ] && export JAVA_HOME="$java_home"
 
