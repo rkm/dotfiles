@@ -51,8 +51,9 @@ export GOPATH="$HOME/src/go"
 go_bin="$GOPATH/bin"; [ -d "$go_bin" ] && export PATH="$go_bin:$PATH"
 
 ## Java
-java_home=$(readlink -m "$(readlink -f /usr/bin/java)/../../..")
+java_home=$(readlink -m "$(readlink /usr/bin/java)/../..")
 [ -d "$java_home" ] && export JAVA_HOME="$java_home"
+unset java_home
 
 ## JavaScript
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
