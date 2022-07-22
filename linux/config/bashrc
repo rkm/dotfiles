@@ -13,7 +13,7 @@ shopt -s histappend
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-LS_COLORS=$LS_COLORS:'di=4;37:'
+LS_COLORS=${LS_COLORS}:'di=4;37:'
 export LS_COLORS
 
 shopt -s checkwinsize
@@ -24,7 +24,7 @@ export EDITOR=vim
 export VISUAL=vim
 
 # Simplified settings for teaching
-if [ "$TEACH" != "" ]; then
+if [[ -n "${TEACH:=}" ]]; then
     unset PROMPT_COMMAND
     export PS1="[\u@\h \W]\\$ "
     alias python=python3
@@ -32,7 +32,7 @@ if [ "$TEACH" != "" ]; then
 fi
 
 function timer_start {
-  timer=${timer:-$SECONDS}
+  timer=${timer:-${SECONDS}}
 }
 trap 'timer_start' DEBUG
 
@@ -47,16 +47,16 @@ function prompt_command {
     RC="$?"
 
     if \
-        [ -d .git ] &&
-        [ ! -x .git/hooks/pre-commit ] &&
-        [ -e .pre-commit-config.yaml ] &&
-        which pre-commit >& /dev/null
+        [[ -d .git ]] &&
+        [[ ! -x .git/hooks/pre-commit ]] &&
+        [[ -e .pre-commit-config.yaml ]] &&
+        command -v pre-commit >& /dev/null
     then
         pre-commit install
     fi
 
     VENV_PROMPT=
-    if [ -n "$VIRTUAL_ENV" ]
+    if [[ -n "${VIRTUAL_ENV}" ]]
     then
         VENV_PROMPT="(${VIRTUAL_ENV})"
     fi
@@ -67,4 +67,4 @@ function prompt_command {
 export PROMPT_COMMAND=prompt_command
 
 # shellcheck source=linux/config/bash_aliases
-[ -f "$XDG_CONFIG_HOME/bash_aliases" ] && . "$XDG_CONFIG_HOME/bash_aliases"
+[[ -f "${XDG_CONFIG_HOME:=}/bash_aliases" ]] && . "${XDG_CONFIG_HOME}/bash_aliases"

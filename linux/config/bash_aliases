@@ -12,23 +12,23 @@ alias path='echo -e ${PATH//:/\\n}'
 alias utop='top -u $USER'
 alias clock='watch -n0.1 '\''figlet -ctkf big "$(date +%H:%M:%S)"'\'''
 
-alias wget='wget --hsts-file=$XDG_CACHE_HOME/wget-hsts'
+[[ -d ${XDG_CACHE_HOME:=} ]] && alias wget='wget --hsts-file=$XDG_CACHE_HOME/wget-hsts'
 
 alias gdc='git diff --cached'
 
 alias ss='sudo systemctl'
 
-alias weechat='weechat -d $XDG_CONFIG_HOME/weechat'
+[[ -d ${XDG_CONFIG_HOME:=} ]] && alias weechat='weechat -d $XDG_CONFIG_HOME/weechat'
 
 alias tf=terraform
 
 alias clean_ssh="SSH_AUTH_SOCK= TERM=xterm ssh"
 
-if [ -d ~/opt/maven ]; then
+if [[ -d ~/opt/maven ]]; then
     function mvn () {
         ~/opt/maven/bin/mvn \
             --no-transfer-progress \
-            --settings "$XDG_CONFIG_HOME"/maven/settings.xml \
+            --settings "${XDG_CONFIG_HOME}/maven/settings.xml" \
             "$@"
     }
     export -f mvn
