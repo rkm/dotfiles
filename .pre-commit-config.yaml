@@ -72,6 +72,7 @@ repos:
     rev: v0.8.0.4
     hooks:
       - id: shellcheck
+        args: [--enable=all]
   # Python
   # - repo: https://github.com/asottile/setup-cfg-fmt
   #   rev: v1.11.0
