@@ -71,9 +71,12 @@ export IPYTHONDIR="${XDG_CONFIG_HOME}/jupyter"
 export JUPYTER_CONFIG_DIR="${XDG_CONFIG_HOME}/jupyter"
 
 ## Rust
-export CARGO_HOME="${XDG_DATA_HOME}/cargo"
-export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
-cargo_bin="${XDG_DATA_HOME}/cargo/bin"; [[ -d "${cargo_bin}" ]] && export PATH="${cargo_bin}:${PATH}"
+cargo_bin="${XDG_DATA_HOME}/cargo/bin"
+if [[ -d "${cargo_bin}" ]]; then
+    export CARGO_HOME="${cargo_bin}/cargo"
+    export RUSTUP_HOME="${cargo_bin}/rustup"
+    export PATH="${cargo_bin}:${PATH}"
+fi
 
 ## SQLite
 export SQLITE_HISTORY="${XDG_DATA_HOME}/sqlite_history"
