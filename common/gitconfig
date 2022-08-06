@@ -9,6 +9,9 @@
   filemode = false
   ignorecase = false
 
+[init]
+  defaultBranch = main
+
 [alias]
   co = checkout
   br = branch
