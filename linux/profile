@@ -25,6 +25,12 @@ export LESSHISTFILE="-"
 home_bin="${HOME}/bin"; [[ -d "${home_bin}" ]] && export PATH="${home_bin}:${PATH}"
 opt_bin="/opt/bin";   [[ -d "${opt_bin}" ]] && export PATH="${opt_bin}:${PATH}"
 
+# Setup bash-completion
+# Ref: https://github.com/scop/bash-completion#installation
+bash_completion="/usr/share/bash-completion/bash_completion"
+# shellcheck source=/dev/null
+[[ -n "${PS1}" && -f "${bash_completion}" ]] && . "${bash_completion}"
+
 # Program-specific settings
 
 ## Docker
