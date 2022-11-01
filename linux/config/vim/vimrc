@@ -21,7 +21,7 @@ set noautoindent
 set formatoptions-=cro
 
 " Column rulers
-execute "set colorcolumn=80,88"
+execute "set colorcolumn=80,88,120"
 execute "highlight ColorColumn ctermbg=darkgrey"
 
 " Trailing whitespace highlight
