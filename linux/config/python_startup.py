@@ -4,7 +4,6 @@ from pathlib import Path
 
 
 def patched_register_readline() -> None:
-
     import atexit
 
     try:
