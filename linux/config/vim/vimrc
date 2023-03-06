@@ -40,6 +40,11 @@ function TODAY()
 endfunction
 iabbrev <expr> dt# TODAY()
 
+function MEET()
+    return "Prep:\n\nNotes:\n\nActions:\n"
+endfunction
+iabbrev <expr> meet# MEET()
+
 " turn hybrid line numbers on
 set number relativenumber
 
