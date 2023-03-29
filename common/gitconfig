@@ -20,6 +20,7 @@
   pushall = !git remote | xargs -L1 git push --all
   # NOTE: Prunes local tags
   pt = !git tag -l | xargs git tag -d && git fetch -t
+  root = !cd $(git rev-parse --show-toplevel)
 
 [fetch]
   prune = true
