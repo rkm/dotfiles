@@ -101,6 +101,10 @@ export WEECHAT_HOME="${XDG_CONFIG_HOME}"/weechat
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 export VIRTUALENV_ACTIVATORS=bash
 
+# gpg
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
 # Finally, source bashrc
 # shellcheck source=linux/config/bashrc
 [[ -f "${XDG_CONFIG_HOME}/bashrc" ]] && . "${XDG_CONFIG_HOME}/bashrc"

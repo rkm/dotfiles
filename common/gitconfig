@@ -4,6 +4,7 @@
   name = Ruairidh MacLeod
   email = ruairidh@rkm.dev
   username = rkm
+  signingkey = 1B81AD3344935D17
 
 [core]
   filemode = false
@@ -45,3 +46,9 @@
 
 [advice]
     addIgnoredFile = false
+
+[commit]
+    gpgSign = true
+
+[tag]
+    gpgSign = true
