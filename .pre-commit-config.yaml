@@ -45,7 +45,7 @@ repos:
             meta/pre-commit-config-base.yaml|
           )$
   - repo: https://github.com/codespell-project/codespell
-    rev: v2.3.0
+    rev: v2.4.1
     hooks:
       - id: codespell
         args:
@@ -58,7 +58,7 @@ repos:
             '\Whttps?://\S*',
           ]
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.35.1
+    rev: v1.37.0
     hooks:
       - id: yamllint
         args: [-c, .meta/yamllint.yaml]
@@ -91,7 +91,7 @@ repos:
       - id: add-trailing-comma
         args: [--py36-plus]
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.18.0
+    rev: v3.19.1
     hooks:
       - id: pyupgrade
         args: [--py39-plus]
@@ -101,24 +101,24 @@ repos:
       - id: yesqa
         additional_dependencies: [pep8-naming]
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.12.1
+    rev: v1.15.0
     hooks:
       - id: mypy
         args: [--config-file, .meta/mypy.ini]
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: "24.10.0"
+    rev: "25.1.0"
     hooks:
       - id: black
         language_version: python39
   - repo: https://github.com/PyCQA/flake8
-    rev: 7.1.1
+    rev: 7.2.0
     hooks:
       - id: flake8
         additional_dependencies:
           [flake8-assert-msg, flake8-bugbear, pep8-naming]
         args: [--config, .meta/flake8.conf]
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.18
+    rev: 0.7.22
     hooks:
     - id: mdformat
       additional_dependencies:
